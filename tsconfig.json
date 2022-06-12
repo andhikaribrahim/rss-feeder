@@ -17,9 +17,12 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
+    "esModuleInterop": true,
     "paths": {
       "@controllers/*": ["src/Controllers/*"],
       "@services/*": ["src/Services/*"],
+      // Conflicting alias with @types, so we use ~types instead.
+      "~types/*": ["src/Types/*"],
     }
   }
 }
