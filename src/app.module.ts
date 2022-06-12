@@ -3,6 +3,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 
+/* Controllers */
+import { RSSController } from '@controllers/RSSController';
+
+/* Services */
+import { RSSService } from '@services/RSS';
+
 import configuration from 'config/configuration';
 
 @Module({
@@ -12,7 +18,7 @@ import configuration from 'config/configuration';
       load: [configuration],
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, RSSController],
+  providers: [AppService, RSSService],
 })
 export class AppModule {}
