@@ -3,11 +3,6 @@ import Parser from 'rss-parser';
 
 import { RSSResults } from '~types/RSS';
 
-/*
-  TODO: create scheduler/cron to fetch rss and store to compare
-  feeds between old vs new. If there's a diff, then send new message to telegram.
-*/
-
 @Injectable()
 export class RSSService {
   getHello(): string {
